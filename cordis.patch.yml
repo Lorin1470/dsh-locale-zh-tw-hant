@@ -1,0 +1,5 @@
+# 將繁體中文語言包插入 Web profile 的設定樹。
+# 安裝：把本套件放入 profile 的 node_modules，並加入 dsh.profile.bundles。
+- insert:
+    - id: dsh-locale-zh-tw-hant
+      name: dsh-locale-zh-tw-hant

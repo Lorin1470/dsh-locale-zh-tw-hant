@@ -1,0 +1,67 @@
+{
+  "name": "dsh-locale-zh-tw-hant",
+  "version": "1.0.0",
+  "description": "DeepSeek Harness（DSH）Web 介面繁體中文（台灣）語言包：72 個命名空間、3,825 條字串，探台灣用語",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "extract": "node scripts/extract-from-app.mjs",
+    "pack:check": "node --check lib/client.js && node --check lib/index.js"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "locale",
+    "i18n",
+    "zh-tw",
+    "zh-hant",
+    "繁體中文",
+    "台灣"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lorin1470/dsh-locale-zh-tw-hant.git"
+  },
+  "homepage": "https://github.com/Lorin1470/dsh-locale-zh-tw-hant#readme",
+  "bugs": {
+    "url": "https://github.com/Lorin1470/dsh-locale-zh-tw-hant/issues"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ],
+      "immediately": true
+    }
+  },
+  "devDependencies": {
+    "@electron/asar": "^3.2.10",
+    "opencc-js": "^1.0.5"
+  }
+}
