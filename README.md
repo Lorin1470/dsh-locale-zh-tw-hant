@@ -1,5 +1,8 @@
 # dsh-locale-zh-tw-hant
 
+[![npm version](https://img.shields.io/npm/v/dsh-locale-zh-tw-hant.svg)](https://www.npmjs.com/package/dsh-locale-zh-tw-hant)
+[![license](https://img.shields.io/npm/l/dsh-locale-zh-tw-hant.svg)](LICENSE)
+
 DeepSeek Harness（DSH）Web 介面的**繁體中文（台灣）**語言包。
 
 不是逐字簡轉繁：字串以 OpenCC `s2twp`（台灣詞組）轉換，再套一層台灣軟體介面用語表，例如
@@ -25,6 +28,16 @@ DeepSeek Harness（DSH）Web 介面的**繁體中文（台灣）**語言包。
 ## 安裝
 
 需求：DSH Desktop `0.2.2-rc.1`（或相容版本）。
+
+### 方式 A：從 npm 安裝（建議）
+
+```bash
+dsh plugin --profile desktop add dsh-locale-zh-tw-hant
+```
+
+安裝後重新啟動 DSH，再到 **Settings → General → Language** 選 **繁體中文**。
+
+### 方式 B：手動安裝
 
 ```bash
 # 1. 取得套件
@@ -57,7 +70,7 @@ cp -R . "$PROFILE/node_modules/dsh-locale-zh-tw-hant"
 
 4. 重新啟動 DSH，然後到 **Settings → General → Language** 選 **繁體中文**。
 
-> 也可以發佈到 npm 後用 `dsh plugin --profile desktop add dsh-locale-zh-tw-hant` 安裝。
+> 套件已發佈到 npm：<https://www.npmjs.com/package/dsh-locale-zh-tw-hant>
 
 ## 切換／移除
 
